@@ -1,0 +1,43 @@
+.contents
+  .quizTitle
+  .text
+  %ul
+    %li
+      %button#correct.correct
+    %li
+      %button#uncorrect1.uncorrect
+    %li
+      %button#uncorrect2.uncorrect
+    %li
+      %button#uncorrect3.uncorrect
+#petsImage
+  = image_tag "", size: "430x430", alt: "pets"
+%table
+  %tr
+    %th
+      問題
+    %td
+      1
+    %td
+      2
+    %td
+      3
+    %td
+      4
+    %td
+      5
+  %tr
+    %th
+      結果
+    %td.table0
+    %td.table1
+    %td.table2
+    %td.table3
+    %td.table4
+
+.modal
+  .modal__bg
+  .modal__content
+    %p.replay
+      もう一度あそぶ
+    =link_to "トップページに戻る", root_path, class: "returnTop"

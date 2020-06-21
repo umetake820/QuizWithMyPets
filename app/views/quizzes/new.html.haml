@@ -1,0 +1,8 @@
+= form_for @quiz do |f|
+  = f.select :category_id, [["学問",1],["生活",2],["芸能",3],["スポーツ",4]], prompt: "ジャンルを選択してください", class: 'form genreSelect'
+  = f.text_area :text, placeholder: '問題文を入力して下さい', class: 'form inputText'
+  = f.text_field :correct, placeholder: '答えを記入して下さい', class: 'form inputCorrect'
+  = f.text_field :uncorrect1, placeholder: '他選択肢を記入して下さい', class: 'form inputUncorrect'
+  = f.text_field :uncorrect2, placeholder: '他選択肢を記入して下さい', class: 'form inputUncorrect'
+  = f.text_field :uncorrect3, placeholder: '他選択肢を記入して下さい', class: 'form inputUncorrect'
+  = f.submit '送信', class: 'form submitBtn'

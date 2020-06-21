@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}/
+    %title QuizWithMyCats
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all'
+    = include_gon
+    = javascript_include_tag 'application'
+  %body
+    %header.header
+      .header__title
+        = link_to "QuizWithMyCats", root_path
+      .header__contents
+        - if user_signed_in?
+          = link_to current_user.nickname, "/users/#{current_user.id}", class: "userName"
+          = link_to "問題作成", new_quiz_path, class: "leftBtn"
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "rightBtn"
+        - else
+          = link_to "新規登録", new_user_registration_path, class: "leftBtn"
+          = link_to "ログイン", new_user_session_path, class: "rightBtn"
+    .back-image
+      = yield

@@ -1,0 +1,8 @@
+.contents
+  ジャンルを選択して下さい
+  .genre
+    = link_to "全ジャンル", "/quizzes/show", class: 'ノンジャンル'
+    = link_to "学問", category_path(id:1), class: '学問'
+    = link_to "生活", category_path(id:2), class: '生活'
+    = link_to "芸能", category_path(id:3), class: '芸能'
+    = link_to "スポーツ", category_path(id:4), class: 'スポーツ'

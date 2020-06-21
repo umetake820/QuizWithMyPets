@@ -1,0 +1,313 @@
+* {
+  box-sizing: border-box;
+  font-family: 'M PLUS Rounded 1c';
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+header {
+  background-color: lightgreen;
+  height: 90px;
+  width: 1440px;
+  .header__title {
+    color: rgba(0, 221, 255, 0.413);
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 1px 2px 3px #808080;
+    line-height: 90px;
+    padding-left: 120px;
+    float: left;
+    a {
+      text-decoration: none;
+      color: rgba(0, 157, 255, 0.783);
+    }
+  }
+  .header__contents {
+    font-size: 30px;
+    float: right;
+    display: flex;
+    line-height: 90px;
+    margin-right: 50px;
+    a.userName {
+      color: blue;
+      text-decoration: none;
+      margin-right: 30px;
+    }
+    .userName:hover {
+      color: red;
+    }
+    a.leftBtn {
+      color: blue;
+      text-decoration: none;
+      margin-right: 30px;
+    }
+    .leftBtn:hover {
+      color: red;
+    }
+    a.rightBtn {
+      color: blue;
+      text-decoration: none;
+      margin-right: 30px;
+    }
+    .rightBtn:hover {
+      color: red;
+    }
+  }
+}
+
+.back-image {
+  background-image: url('kokuban.jpg');
+  background-size: 1440px 1000px;
+  height: 1000px;
+  width: 1440px;
+  padding: 4%;
+  position: relative;
+  .contents {
+    color: white;
+    font-size: 50px;
+    opacity: 0.7;
+    float: left;
+    .ノンジャンル {
+      color: black;
+      display: block;
+    }
+    .学問 {
+      color: purple;
+      display: block;
+    }
+    .生活 {
+      color: blue;
+      display: block;
+    }
+    .芸能 {
+      color: yellow;
+      display: block;
+    }
+    .スポーツ {
+      color: red;
+      display: block;
+    }
+    a {
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.new_quiz {
+    font-size: 30px;
+  .form {
+    display: block;
+    border-radius: 5px;
+    border: transparent;
+  }
+  .inputText {
+    height: 30vh;
+    width: 50%;
+    margin-top: 10px;
+  }
+  .inputCorrect {
+    margin: 10px 0;
+  }
+  .inputUncorrect {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  .submitBtn {
+    height: 50px;
+    width: 100px;
+    margin-top: 20px;
+  }
+  .submitBtn:hover {
+    background-color:grey;
+  }
+}
+
+button {
+  background-color: white;
+  width: 700px;
+  font-size: 40px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: yellow;
+}
+
+.text {
+  height: 300px;
+  white-space: pre-wrap;
+}
+
+#petsImage {
+  display: none;
+  margin-right: 100px;
+  float: right;
+}
+
+.balloon {
+  height: 200px;
+  width: 750px;
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 15px 1.5em 0;
+  color: #555;
+  font-size: 50px;
+  background: white;
+  border-radius: 30px;
+  text-align: center;
+  line-height: 200px;
+}
+
+.balloon:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-left: 15px solid white;
+}
+
+.quizTitle {
+  margin-left: 275px;
+  border-bottom: double 10px;
+  display: inline-block
+}
+
+table {
+  width: 520px;
+  height: 200px;
+  color: white;
+  font-size: 40px;
+  margin: 450px 0 0 750px;
+  position: absolute;
+  border: solid 5px white;
+  opacity: 0.8;
+  text-align: center;
+  th {
+    width: 100px;
+    border: solid 5px white;
+    text-align: center;
+  }
+  td {
+    width: 80px;
+    border: solid 5px white;
+  }
+}
+
+:disabled {
+  color: black;
+}
+
+.create {
+  color: white;
+  font-size: 50px;
+  opacity: 0.7;
+}
+
+.modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.modal__bg{
+	z-index: 1;
+	position:fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color:rgba(0,0,0,0.2);
+}
+
+.modal__content{
+  z-index: 2;
+  background-color: rgba(235, 231, 104, 0.8);
+  border: 5px solid brown;
+  border-radius: 5px;
+  left: 46%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  p {
+    text-align: center;
+    font-size: 40px;
+    cursor: pointer;
+  }
+  p:hover {
+    color: red;
+  }
+  a.returnTop {
+    color: black;
+    font-size: 40px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+  }
+  .returnTop:hover {
+    color: red;
+  }
+}
+
+.new_user {
+  color: white;
+  font-size: 40px;
+  opacity: 0.8;
+}
+
+.userPage {
+  max-width: 1440px;
+  .userPets {
+    color: white;
+    font-size: 40px;
+    opacity: 0.7;
+  }
+  .petsList {
+    margin: 0 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .postDate {
+    color: white;
+    opacity: 0.7;
+    }
+  }
+  .petsNew {
+    color: white;
+    opacity: 0.8;
+    font-size: 30px;
+    height: 90px;
+    padding: 20px 40px;
+    form {
+      .input__image {
+        right: 10px;
+        line-height: 50px;
+        cursor: pointer;
+        &__file {
+          display: none;
+        }
+      }
+      .submit-btn {
+        height: 50px;
+        width: 100px;
+        margin-top: 20px;
+      }
+      .submit-btn:hover {
+        background-color:grey;
+      }
+    }
+  }
+}
