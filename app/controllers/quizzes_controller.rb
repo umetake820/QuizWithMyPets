@@ -4,7 +4,11 @@ class QuizzesController < ApplicationController
   end
 
   def new
-    @quiz = Quiz.new
+    if current_user.id == 1
+      @quiz = Quiz.new
+    else
+      redirect_to root_path
+    end
   end
 
   def create
