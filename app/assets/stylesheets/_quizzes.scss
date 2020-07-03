@@ -61,8 +61,10 @@ header {
 .back-image {
   background-image: url('kokuban.jpg');
   background-size: 1440px 1000px;
-  height: 1000px;
-  width: 1440px;
+  height: calc(100vw - 90px);
+  min-height: 1000px;
+  width: 100%;
+  min-width: 1440px;
   padding: 4%;
   position: relative;
   .contents {
